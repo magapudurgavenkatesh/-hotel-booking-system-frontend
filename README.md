@@ -1,6 +1,8 @@
-# StayEasy - Hotel Booking System
+# StayEasy – Hotel Booking System
 
-A full-stack Hotel Booking System built using **Spring Boot, React, and MySQL**. Users can register, log in, browse hotel rooms, make bookings, view their booking history, and cancel bookings.
+A full-stack Hotel Booking System built using **Spring Boot, React, and MySQL**.
+
+Users can register, log in, browse hotel rooms, make bookings, view their booking history, and cancel reservations.
 
 ## Features
 
@@ -44,15 +46,19 @@ A full-stack Hotel Booking System built using **Spring Boot, React, and MySQL**.
 
 ## Project Structure
 
-The project contains two separate applications:
+The project contains two separate applications.
 
-**Backend:** `hotel-booking-system`
+**Backend – Spring Boot**
 - Handles business logic, authentication, room management, and bookings.
 - Connects to the MySQL database.
 
-**Frontend:** `hotel-booking-frontend`
+**Frontend – React**
 - Provides the user interface.
 - Communicates with the backend through REST APIs.
+
+## Screenshots
+
+Screenshots of the application will be added here.
 
 ## Setup Instructions
 
@@ -65,7 +71,15 @@ The project contains two separate applications:
 
 ### 1. Clone the repositories
 
-Clone the backend and frontend projects into your computer.
+**Backend:**
+```bash
+git clone https://github.com/magapudurgavenkatesh/hotel-booking-system-backend.git
+```
+
+**Frontend:**
+```bash
+git clone https://github.com/magapudurgavenkatesh/-hotel-booking-system-frontend.git
+```
 
 ### 2. Configure the MySQL database
 
@@ -75,22 +89,28 @@ Create a database named:
 CREATE DATABASE hotel_booking;
 ```
 
-Configure your database username and password in the backend's `application.properties` file.
+Configure the following environment variables for the backend:
 
-Do not upload real database passwords to GitHub.
+```text
+DB_USERNAME=your_mysql_username
+DB_PASSWORD=your_mysql_password
+```
+
+Never upload actual database passwords to GitHub.
 
 ### 3. Run the Backend
 
-1. Open the `hotel-booking-system` project in STS.
-2. Configure the MySQL connection.
+1. Open the backend project in STS.
+2. Configure the database environment variables.
 3. Run the Spring Boot application.
-4. The backend runs at:
+
+Backend URL:
 
 `http://localhost:8080`
 
 ### 4. Run the Frontend
 
-1. Open the `hotel-booking-frontend` folder in VS Code.
+1. Open the frontend project in VS Code.
 2. Open the terminal.
 3. Install dependencies:
 
@@ -104,7 +124,7 @@ npm install
 npm run dev
 ```
 
-5. Open the application at:
+Frontend URL:
 
 `http://localhost:5173`
 
@@ -119,7 +139,7 @@ npm run dev
 | PUT | `/rooms/{id}` | Update a room (ADMIN) |
 | DELETE | `/rooms/{id}` | Delete a room (ADMIN) |
 | POST | `/bookings` | Create a booking |
-| GET | `/bookings` | View the authenticated user's bookings |
+| GET | `/bookings` | View authenticated user's bookings |
 | GET | `/bookings/{id}` | View booking details |
 | PUT | `/bookings/{id}` | Update a booking |
 | DELETE | `/bookings/{id}` | Cancel a booking |
@@ -127,18 +147,26 @@ npm run dev
 
 ## Authentication and Authorization
 
-- Spring Security is used for authentication and authorization.
+- Spring Security handles authentication and authorization.
 - Passwords are stored using password encoding.
 - HTTP Basic Authentication is used for authenticated API requests.
 - Users can access their own bookings.
-- ADMIN users have permission to manage hotel rooms.
+- ADMIN users can manage hotel rooms.
 - New registrations receive the USER role by default.
 
 ## Important Notes
 
-- The frontend and backend must both be running to use the application.
+- Both frontend and backend must be running to use the application locally.
 - Configure your own database credentials before starting the backend.
 - This project is intended as a learning and portfolio project. Its authentication approach should be strengthened before production deployment.
+
+## GitHub Repositories
+
+**Backend:**  
+https://github.com/magapudurgavenkatesh/hotel-booking-system-backend
+
+**Frontend:**  
+https://github.com/magapudurgavenkatesh/-hotel-booking-system-frontend
 
 ## Author
 
