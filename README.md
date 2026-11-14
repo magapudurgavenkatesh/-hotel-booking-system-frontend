@@ -58,7 +58,17 @@ The project contains two separate applications.
 
 ## Screenshots
 
-Screenshots of the application will be added here.
+### Home Page
+![Home Page](screenshots/home.png)
+
+### Login Page
+![Login Page](screenshots/login.png)
+
+### Booking Page
+![Booking Page](screenshots/booking.png)
+
+### My Bookings
+![My Bookings](screenshots/my-bookings.png)
 
 ## Setup Instructions
 
